@@ -13,12 +13,22 @@ body{font-family: microsoft yahei, Arial, sans-serif; font-size: 12px; color: #9
 a{text-decoration: none; color: #999;}
 a:hover{cursor: pointer;text-decoration: underline;}
 
-#loadbar{height:5px;left:0;position:absolute;top:0px;width:100%;z-index:99999}
-#loadbar div{display:none;height:5px;background:#E53C39}
+#loadbar{left:0;position:absolute;top:0;width:100%;z-index:99999}
+#loadbar div{height:5px;background:#9E4E31;width:0%;display:block;}
+
+#footer{left:0;position:absolute;bottom:0;width:100%;z-index:99999}
+#footer div{height:5px;background:#9E4E31;width:100%;display:block;}
 
 .menu{background-image: url(../images/menu.png); position: fixed; color: white; top: 50px; left: 130px; width: 168px; height: 169px; z-index: 1;}
-.menu > span{position: fixed; left: 190px; top: 125px; font-size: 14px; font-weight: bold;}
+.menu > span{position: fixed; left: 190px; top: 125px; font-size: 14px; font-weight: bold;-webkit-animation: bounce .3s ease infinite alternate;}
 .menu > span > a{color: white;}
+/* ANIMATION */
+@-webkit-keyframes bounce {
+    100% {
+        top: 120px;
+        text-shadow: 0 50px 25px rgba(0, 0, 0, 0.5);
+    }
+}
 
 .logo{position: absolute; top: 50%; left: 50%;}
 
