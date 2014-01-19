@@ -4,17 +4,13 @@ Hi! I'm Jason Xiang, a front-end web developer. I currently work in Foxconn, bui
 
 Home Page
 ----
-http://xiguabaobao.com/
+http://jasonxiang.com/
 
 Author
 ------
 [Jason Xiang](http://github.com/xiangming)
 
-+ http://xiguabaobao.com
-
-Thanks
-------
-[Lucia Soto](http://luciasoto.com) for the pretty background image.
++ http://jasonxiang.com
 
 License
 -------

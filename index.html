@@ -1,80 +1,144 @@
 <!DOCTYPE html>
+<!--
+******开发者信息******
+Name: Jason Xiang
+Mail: info@xiguabaobao.com
+Site: http://xiguabaobao.com
+Date: 2013-01-19
+-->
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>西瓜宝宝前端资源网 - 优秀前端开发资源分享博客</title>
-    <meta name="description"
-          content="西瓜宝宝网是一个专注web前端开发的博客,关注国内外最新的前端开发开源项目,致力于分享最好的前端开发资源,打造优秀的前端开发资源分享博客。">
-    <meta name="keywords"
-          content="前端, 资源, 前端开发, web前端, web前端开发, 前端资源, 前端开发资源, web前端开发资源, 国外, 开源项目, 前端开发工程师, 前端开发攻城师, webresources, github, codrops, codepen, CSS, JavaScript, Ajax, jQuery, html, html5, css3">
-    <meta name="author" content="Jason Xiang,Poppy Chen,webappsniper">
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
-    <link rel="icon" href="http://xiguabaobao.com/images/favicon.ico">
-    <link rel="shortcut icon" href="http://xiguabaobao.com/images/favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<title>Jason Xiang | Front-End Developer @ Foxconn</title>
+	<meta name="description" content="嗨！我是向明，一个有梦想的Web前端工程师。我目前在富士康研发中心工作，负责开发网站和应用，主要集中在HTML5、CSS3和JavaScript。">
+    <meta name="keywords" content="向明, JasonXiang, 前端工程师, 个人主页, Github">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<link rel="icon" href="http://xiguabaobao.com/favicon.ico">
+    <link rel="shortcut icon" href="http://xiguabaobao.com/favicon.ico">
+	<link rel="stylesheet" href="css/style.css?ver=1.0">
 </head>
 <body>
-<div class="container">
-    <div class="menu">
-        <span><a href="http://xiguabaobao.com/blog" title="访问博客">BLOG</a></span>
-    </div>
+	<div class="header">
+        <ul class="nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <!-- <li><a href="articles.html">Articles</a></li> -->
+            <li><a href="projects.html">Projects</a></li>
+            <li><img id="logo" class="logo" src="img/logo.png" alt="Jason Xiang"></li>
+            <!-- <li><a href="services.html">Services</a></li> -->   
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul><!-- / .nav -->
+	</div><!-- / .header -->
 
-    <p class="copyright">
-        &copy; 2013
-        <a href="http://xiguabaobao.com">西瓜宝宝网</a>
-        | info@xiguabaobao.com |
-        <a href="http://www.miibeian.gov.cn" target="_blank" title="备案中心">渝ICP备13001796号</a> |
-        <a href="coming.html" title="查看旧版首页">旧版首页</a> |
-        <span><a href="http://xiguabaobao.com/blog" title="获取前端开发资源">前端开发博客</a></span>
-    </p>
-</div>
+    <div class="content">
+        
+        <!--[if lt ie 9]>
+        <div class="browsehappy">当前网页 <strong>不支持</strong> 你正在使用的浏览器。为了正常的访问，请 <a href="http://browsehappy.com/">升级你的浏览器</a>。</div>
+        <![endif]-->
 
-<!-- HTML5shiv for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<![endif]-->
+        <div class="slide-wrapper">
+            <div id="slide" class="slide">
+                <div class="slide-item">
+                    <a href="http://xiguabaobao.com/demo/leyi/index.html" title="" target="_blank"><img src="img/slide-img-1.jpg" alt="乐艺播放器视频网站代码下载"></a>
+                    <div class="slide-title"><a href="http://xiguabaobao.com/demo/leyi/index.html">乐艺播放器</a></div>
+                </div>
 
-<script src="js/jquery.js"></script>
+                <div class="slide-item active">
+                    <a href="http://xiguabaobao.com/weibo/" title="" target="_blank"><img src="img/slide-img-2.jpg" alt="新浪微博开放API实例代码下载"></a>
+                    <div class="slide-title"><a href="http://xiguabaobao.com/weibo/">看微博</a></div>
+                </div>
 
-<!-- loading progress bar -->
-<div id="loadbar">
-    <div></div>
-</div>
-<div id="footer">
-    <div></div>
-</div>
-<script type="text/javascript">
-    $(window).load(function () {
-        $("#loadbar").show();
-        $("#loadbar div").animate({width: "100%"});
-        $("#footer div").animate({width:0});
-    })
-</script>
+                <div class="slide-item">
+                    <a href="http://xiguabaobao.com/music/" title="" target="_blank"><img src="img/slide-img-3.jpg" alt="HTML5 audio实例代码下载"></a>
+                    <div class="slide-title"><a href="http://xiguabaobao.com/music/">私人音乐盒</a></div>
+                </div>
 
-<!-- interesting ball down with iio framework -->
-<script type="text/javascript" src="js/iioEngine.js"></script>
-<script type="text/javascript" src="js/balldown.js"></script>
-<script type="text/javascript">
-    iio.start(BallDown);
-</script>
+            </div><!-- / .slide -->
+            <div class="clearfix"></div>
+        </div>
+        
+        <div class="container feature">
+            <div class="section">
+                我是<a href="http://weibo.com/u/3143136794" target="_blank"> 向明</a>，我概括自己为这样的一个人：审美、激情、努力、创新。
+                <span class="quot"></span>
+            </div>
+        </div>
+        
+        <div class="container feature-list">
+            <div class="section">
+                <div class="feature-item">
+                    <img src="img/feature-img-1.png" alt="审美">
+                    <h3>审美</h3>
+                    <div>钟情于美好的事物，喜欢创造美，这样你的工作才会成为你的爱好。</div>
+                </div>
 
-<!--Code for google analytics-->
-<script type="text/javascript">
+                <div class="feature-item">
+                    <img src="img/feature-img-2.png" alt="激情">
+                    <h3>激情</h3>
+                    <div>遇到感兴趣的技术和新的挑战，我定会钻研至深夜。</div>
+                </div>
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-40091127-1']);
-    _gaq.push(['_trackPageview']);
+                <div class="feature-item">
+                    <img src="img/feature-img-3.png" alt="努力">
+                    <h3>努力</h3>
+                    <div>有上进心，一直在努力拼搏，严格要求自己。</div>
+                </div>
 
-    (function () {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
+                <div class="feature-item">
+                    <img src="img/feature-img-4.png" alt="创新">
+                    <h3>创新</h3>
+                    <div>喜欢新鲜事物和新技术，经常开发一些小程序解决生活中的实际问题。</div>
+                </div>
+            </div>
+        </div>
+    </div><!-- / .content-->
+	
+    <div class="footer">
+        <div class="container">
+            <!-- 社交图标 -->
+            <div class="social">
+                <ul>
+                    <li>
+                        <a target="_blank" href="http://weibo.com/u/3143136794"><i class="icon-weibo"></i></a>
+                        <div class="tooltip top">Weibo</div>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/xiangming/"><i class="icon-github"></i></a>
+                        <div class="tooltip top">Github</div>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=243148720&site=qq&menu=yes"><i class="icon-qq"></i></a>
+                        <div class="tooltip top">QQ</div>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            
+            <!-- 友情链接： -->
+            <div class="links">
+                <a target="_blank" href="http://segmentfault.com/" title="国内技术问答社区">SegmentFault</a>
+                <a target="_blank" href="http://getbootstrap.com/" title="著名前端开发框架">Bootstrap</a>
+                <a target="_blank" href="http://tympanus.net/codrops/" title="著名国外前端博客">Codrops</a>
+                <a target="_blank" href="https://github.com/" title="著名代码托管平台">GitHub</a>
+                <a target="_blank" href="http://codepen.io/" title="著名代码分享平台">CodePen</a>
+            </div><!-- / .links -->
 
-</script>
+            <div class="copyright">
+                Copyright &copy; 2013
+                <a href="http://xiguabaobao.com/">西瓜宝宝网</a> | 
+                <a href="http://www.miibeian.gov.cn/" target="_blank" title="工信部备案系统">渝ICP备13001796号</a>
+            </div><!-- / .copyright -->
+            
+        </div><!-- / .container -->
+        <div class="clearfix"></div>
+    </div><!-- / .footer -->
+
+	<!-- 将script放置在文档末尾，以加快文档加载速度 -->
+	<script src="js/script.js?ver=1.0"></script>
+    
+	<!-- script for google analytics -->
+	<script>
+		var _gaq=[['_setAccount','UA-40091127-1'],['_trackPageview']];(function(a,b){var c=a.createElement(b),d=a.getElementsByTagName(b)[0];c.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";d.parentNode.insertBefore(c,d)})(document,"script");
+	</script>	
 </body>
 </html>
