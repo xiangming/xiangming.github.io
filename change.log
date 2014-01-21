@@ -1,10 +1,10 @@
-v2.1
-1、修改：移除导航里面的LOGO，更好的兼容响应式设计。
+-Change the footer and add nofollow.
 
 
 v2.0
 1、修改：简化HTML结构：导航栏不使用span，删除welcome模块
 2、修改：加入响应式设计
+3、修改：移除导航里面的LOGO，更好的兼容响应式设计。
 
 
 v1.9
