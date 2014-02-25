@@ -238,28 +238,31 @@
         	titleTip.hide();
         }
 
-  		//创建XHR对象
-  		var xhr = null;
-  		if (window.XMLHttpRequest) {
-  			xhr = new XMLHttpRequest();
-  		} else if (window.ActiveXObject) {
-  			xhr = new ActiveXObject('Microsoft.XMLHTTP');
-  		} else {
-  			alert('没有可用的XHR对象');
-  		}
+  // 		//创建XHR对象
+  // 		var xhr = null;
+  // 		if (window.XMLHttpRequest) {
+  // 			xhr = new XMLHttpRequest();
+  // 		} else if (window.ActiveXObject) {
+  // 			xhr = new ActiveXObject('Microsoft.XMLHTTP');
+  // 		} else {
+  // 			alert('没有可用的XHR对象');
+  // 		}
 
-  		//事件监听
-  		xhr.onreadystatechange = function(){
-  			if (xhr.readyState == 4 && xhr.status == 200) {
-  				alert('请求成功');
-  			};
-  		}
+  // 		//事件监听
+  // 		xhr.onreadystatechange = function(){
+  // 			if (xhr.readyState == 4 && xhr.status == 200) {
+  // 				alert('请求成功'+xhr.responseText);
+  // 			};
+  // 		}
 
-  		//准备请求
-  		xhr.open('GET','http:xiguabaobao.com/mail.php',true);
+  // 		//准备请求
+  // 		xhr.open('GET','http://xiguabaobao.com/mail.php',true);
 
-  		//发送请求
-  		xhr.send(null);
+  // 		//发送请求
+  // 		xhr.send(null);
+
+  // 		//阻止页面跳转
+		// return false;
 	}
 
 
