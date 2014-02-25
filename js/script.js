@@ -46,7 +46,7 @@
     		this.className = className;
     	}else if (this.className.indexOf(className) > -1) {
     		//已经包含需要添加的className
-    		var reg = new RegExp("\\s?"+className+"\\s?");//RegExp的参数不需要首尾的斜杠/
+    		var reg = new RegExp("(^|\\s)"+className+"(\\s|$)");//使用字符串参数时，不需要首尾的斜杠/;括号是分组，不能省略。
     		this.className = this.className.replace(reg,"");//如果使用拼接的方式，可以将字符串eval(str)一下
     	}else{
     		var newClassName = this.className + ' ' + className;
@@ -189,10 +189,11 @@
 
 		var nameTip = new Tooltip(form.name);
 		var emailTip = new Tooltip(form.email);
-		var typeTip = new Tooltip(form.type);
+		var titleTip = new Tooltip(form.title);
+
 		nameTip.hide();
 		emailTip.hide();
-		typeTip.hide();
+		titleTip.hide();
 
 		//姓名name验证
 		if (form.name != undefined && form.name.value == '') {
@@ -207,7 +208,6 @@
         }
 
 		//邮箱email验证
-		//验证规则
 		var email = new RegExp(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/);//用于邮箱格式验证
         if(form.email != undefined && form.email.value == ''){
         	//不允许为空
@@ -226,17 +226,40 @@
         	emailTip.hide();
         }
 
-        //信息类型type验证
-    	if (form.type != undefined && form.type.value == '') {
-			//用户没有选择
-			typeTip.setContent('请选择要发送的信息类型');
-			typeTip.show();
+        //主题title验证
+		if (form.title != undefined && form.title.value == '') {
+			//未通过验证
+			titleTip.setContent('请填写邮件主题');
+			titleTip.show();
 			//阻止页面跳转
 			return false;
 		}else{
 			//通过验证
-        	typeTip.hide();
+        	titleTip.hide();
         }
+
+  		//创建XHR对象
+  		var xhr = null;
+  		if (window.XMLHttpRequest) {
+  			xhr = new XMLHttpRequest();
+  		} else if (window.ActiveXObject) {
+  			xhr = new ActiveXObject('Microsoft.XMLHTTP');
+  		} else {
+  			alert('没有可用的XHR对象');
+  		}
+
+  		//事件监听
+  		xhr.onreadystatechange = function(){
+  			if (xhr.readyState == 4 && xhr.status == 200) {
+  				alert('请求成功');
+  			};
+  		}
+
+  		//准备请求
+  		xhr.open('GET','http:xiguabaobao.com/mail.php',true);
+
+  		//发送请求
+  		xhr.send(null);
 	}
 
 
