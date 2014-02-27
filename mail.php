@@ -11,5 +11,5 @@ $subject = "=?UTF-8?B?".base64_encode('【Contact Form】'.$title)."?=";
 $formcontent="$message";
 $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
-echo "恭喜，你的邮件已成功发送！" . " -" . "<a href='contact.html' style='text-decoration:none;color:#ff0099;'> 返回</a>";
+echo "恭喜，你的邮件已成功发送！" . " -" . "<a href='http://jasonxiang.com/contact.html' style='text-decoration:none;color:#ff0099;'> 返回</a>";
 ?>
