@@ -226,7 +226,7 @@
         	emailTip.hide();
         }
 
-        //主题title验证
+        //邮件主题title验证
 		if (form.title != undefined && form.title.value == '') {
 			//未通过验证
 			titleTip.setContent('请填写邮件主题');
@@ -238,33 +238,24 @@
         	titleTip.hide();
         }
 
-  // 		//创建XHR对象
-  // 		var xhr = null;
-  // 		if (window.XMLHttpRequest) {
-  // 			xhr = new XMLHttpRequest();
-  // 		} else if (window.ActiveXObject) {
-  // 			xhr = new ActiveXObject('Microsoft.XMLHTTP');
-  // 		} else {
-  // 			alert('没有可用的XHR对象');
-  // 		}
+        /**
+         * JSONP表单提交
+         */
+        var script = document.createElement('script');
+        script.src = 'http://xiguabaobao.com/mail.php?callback=jsonpCallback';
+        document.body.appendChild(script);
 
-  // 		//事件监听
-  // 		xhr.onreadystatechange = function(){
-  // 			if (xhr.readyState == 4 && xhr.status == 200) {
-  // 				alert('请求成功'+xhr.responseText);
-  // 			};
-  // 		}
-
-  // 		//准备请求
-  // 		xhr.open('GET','http://xiguabaobao.com/mail.php',true);
-
-  // 		//发送请求
-  // 		xhr.send(null);
-
-  // 		//阻止页面跳转
-		// return false;
+  		//阻止页面跳转
+		return false;
 	}
 
+
+	/**
+	 * JSONP自动回调函数
+	 */
+	function jsonpCallback(data){
+		alert(data);
+	}
 
 
 	/**

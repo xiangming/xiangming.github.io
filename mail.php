@@ -11,5 +11,7 @@ $subject = "=?UTF-8?B?".base64_encode('【Contact Form】'.$title)."?=";
 $formcontent="$message";
 $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
-echo "恭喜，你的邮件已成功发送！" . " -" . "<a href='http://jasonxiang.com/contact.html' style='text-decoration:none;color:#ff0099;'> 返回</a>";
+$result = "恭喜，您的邮件已成功发送！";
+echo "{$_GET['callback']}({$result});";//触发客户端JSONP的回调函数
+//echo "恭喜，你的邮件已成功发送！" . " -" . "<a href='http://jasonxiang.com/contact.html' style='text-decoration:none;color:#ff0099;'> 返回</a>";
 ?>

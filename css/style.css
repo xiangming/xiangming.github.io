@@ -92,8 +92,10 @@
 
 /* #Buttons
 ================================================== */
-    .button,button,input[type="submit"],input[type="reset"],input[type="button"]{display:inline-block;padding:0.3em 1em;margin:1em 0.5em 1em 0;line-height:1.5em;color:white !important;text-align:center;background-color:#111;border-radius:1em;cursor:pointer;}
-    .button:hover,button:hover,input[type="submit"]:hover,input[type="reset"]:hover,input[type="button"]:hover{background-color:#39BBEA;color:white !important;}
+    .btn,button,input[type="submit"],input[type="reset"],input[type="button"]{display:inline-block;padding:0.3em 1em;margin:1em 0.5em 1em 0;line-height:1.5em;color:white !important;text-align:center;background-color:#111;border-radius:1em;cursor:pointer;}
+    .btn:hover,button:hover,input[type="submit"]:hover,input[type="reset"]:hover,input[type="button"]:hover{background-color:#39BBEA;color:white !important;}
+    .btn.disabled{cursor:default;background-color:#AAA;}
+    .btn.disabled:hover{background-color:#AAA;}
 
 
 /* #Forms

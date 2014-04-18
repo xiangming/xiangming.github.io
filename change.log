@@ -1,4 +1,12 @@
-取消projects页面在Github上的链接
+
+20140305
+1、将按钮样式从.button改为.btn
+2、增加.disabled按钮样式
+3、contact页面表单使用JSONP方式提交
+
+
+-取消projects页面在Github上的链接
+
 
 -Change the footer and add nofollow.
 -图片使用七牛云存储加速
