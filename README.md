@@ -1,6 +1,6 @@
 Jason Xiang
 ==========
-Hi! I'm Jason Xiang, a front-end web developer. I currently work in Foxconn, building websites and applications, focusing on HTML5, CSS3, and Javascript.
+Hi! I'm Jason Xiang, a front-end web developer. I currently work in Flashbay, building websites and applications, focusing on HTML5, CSS3, and Javascript.
 
 Home Page
 ----
