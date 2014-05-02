@@ -208,7 +208,7 @@
         }
 
 		//邮箱email验证
-		var email = new RegExp(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/);//用于邮箱格式验证
+		var email = new RegExp('^[a-zA-Z0-9_.]+@([a-zA-Z0-9_]+.)+[a-zA-Z]{2,3}$');
         if(form.email != undefined && form.email.value == ''){
         	//不允许为空
         	emailTip.setContent('请填写您的邮箱');
@@ -263,15 +263,16 @@
 	 */
 	function Tooltip(obj){
 		this.tooltip = obj.next('tooltip');
+		this._oldDisplay = obj.next('tooltip').style.display;
 	}
 
 	Tooltip.prototype = {
 		constructor:Tooltip,
 		show: function(){
-			this.tooltip.style.zIndex = '99999';
+			this.tooltip.style.display = _oldDisplay;
 		},
 		hide: function(){
-			this.tooltip.style.zIndex = '-99999';
+			this.tooltip.style.display = 'none';
 		},
 		setContent: function(content,bgColor){
 			this.tooltip.style.backgroundColor = bgColor;
@@ -281,7 +282,7 @@
 			return this.tooltip.innerHTML;
 		},
 		hasContent: function(){
-			return this.getContent();
+			return !!this.getContent();
 		}
 	}
 

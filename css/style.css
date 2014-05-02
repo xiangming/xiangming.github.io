@@ -204,9 +204,9 @@
     .contact-form{width:60%;margin:0 auto;text-align:left;}
     .name,.email,.type{position:relative;}
     .tip + .tooltip{left:242px;}
-    .tip + label{position:absolute;top:10px;left:15px;font-size:20px;color:#A9A9A9;-webkit-transition:all .25s ease-in-out;transition:all .25s ease-in-out;}
+    .tip + label{position:absolute;top:10px;left:15px;font-size:20px;color:#A9A9A9;-webkit-transition:all .25s ease-in-out;-moz-transition:all .25s ease-in-out;-ms-transition:all .25s ease-in-out;-o-transition:all .25s ease-in-out;transition:all .25s ease-in-out;}
     .submit input{background-color:#3498DB;}
-    .type{position:relative;width:100%;height:48px;}
+    .type{display:none;visibility:hidden;opacity:0;position:relative;width:100%;height:48px;}
 
     
     /*下拉菜单*/
