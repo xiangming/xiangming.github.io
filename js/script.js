@@ -183,9 +183,10 @@
 	/**
 	 * contact表单验证
 	 */
-	function checkForm(obj){
+	function checkForm(){
 		//获取当前表单
-		var form = obj;
+		var form = document.getElementById('contactForm');
+		//var form = obj;
 
 		var nameTip = new Tooltip(form.name);
 		var emailTip = new Tooltip(form.email);
