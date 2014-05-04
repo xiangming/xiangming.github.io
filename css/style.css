@@ -93,7 +93,7 @@
 /* #Buttons
 ================================================== */
     .btn,button,input[type="submit"],input[type="reset"],input[type="button"]{display:inline-block;padding:0.3em 1em;margin:1em 0.5em 1em 0;line-height:1.5em;color:white !important;text-align:center;background-color:#111;border-radius:1em;cursor:pointer;}
-    .btn:hover,button:hover,input[type="submit"]:hover,input[type="reset"]:hover,input[type="button"]:hover{background-color:#39BBEA;color:white !important;}
+    .btn:hover,button:hover,input[type="submit"]:hover,input[type="reset"]:hover,input[type="button"]:hover{background-color:#197EE4;color:white !important;}
     .btn.disabled{cursor:default;background-color:#AAA;}
     .btn.disabled:hover{background-color:#AAA;}
 
@@ -233,7 +233,7 @@
     .footer{background:black;color:#888;font-size:1.6em;}
     .footer .social{padding:1em 0;text-align:center;}
     .footer .social li{position:relative;width:66px;height:32px;margin:0 1em;float:none;display:inline-block;*display:inline;*zoom:1;}
-    .footer .social li:hover .tooltip,.footer .social li:focus .tooltip{display:block;z-index:99999;top:-46px;right:50%;width:46px;margin-right:-33px;padding:5px 10px;}
+    .footer .social li:hover .tooltip,.footer .social li:focus .tooltip{display:block;visibility:visible;z-index:99999;top:-46px;right:50%;width:46px;margin-right:-33px;padding:5px 10px;}
     .footer .social li a{display:inline-block;font-size:1.6em;filter:alpha(opacity=50);opacity:.5;}
     .footer .social li a:hover{color:#EEE;}
     .footer .social li a i{width:32px;height:32px;display:block;}
