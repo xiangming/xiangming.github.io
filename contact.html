@@ -53,7 +53,7 @@ Date: 2013-01-19
 
         <div class="container contact">
             <div class="section">
-                <form id="contactForm" method="get" onsubmit="return false;">
+                <form method="post" action="http://xiguabaobao.com/mail.php" onsubmit="return checkForm(this);">
                     <p class="name">
                         <input class="tip" type="text" name="name" placeholder="姓名*">
                         <span class="tooltip right"></span>
@@ -79,7 +79,7 @@ Date: 2013-01-19
                     </p>
 
                     <p class="submit">
-                        <input type="submit" value="发送" class="btn" onclick="checkForm();">
+                        <input type="submit" value="发送" class="btn">
                     </p>
                 </form>
             </div><!-- / .section -->  

@@ -183,10 +183,9 @@
 	/**
 	 * contact表单验证
 	 */
-	function checkForm(){
+	function checkForm(obj){
 		//获取当前表单
-		var form = document.getElementById('contactForm');
-		//var form = obj;
+		var form = obj;
 
 		var nameTip = new Tooltip(form.name);
 		var emailTip = new Tooltip(form.email);
@@ -197,7 +196,7 @@
 		titleTip.hide();
 
 		//姓名name验证
-		if (form.name != undefined && form.name.value == '') {
+		if (form.name != undefined && form.name.value.length < 2) {
 			//未通过验证
 			nameTip.setContent('请填写您的姓名');
 			nameTip.show();
@@ -228,7 +227,7 @@
         }
 
         //邮件主题title验证
-		if (form.title != undefined && form.title.value == '') {
+		if (form.title != undefined && form.title.value.length < 2) {
 			//未通过验证
 			titleTip.setContent('请填写邮件主题');
 			titleTip.show();
@@ -239,23 +238,50 @@
         	titleTip.hide();
         }
 
-        /**
-         * JSONP表单提交
-         */
-        var script = document.createElement('script');
-        script.src = 'http://xiguabaobao.com/mail.php?callback=jsonpCallback';
-        document.body.appendChild(script);
-
-  		//阻止页面跳转
-		return false;
+        // //发送
+        // var data = 'name=' + form.name.value + '&email=' + form.email.value + '&title=' + form.title.value + '&type=' + form.type.value + '&message=' + form.message.value;
+        // var url = 'http://xiguabaobao.com/mail.php';
+        // ajax(url,{
+        // 	type: "POST",
+        // 	data: data
+        // });
 	}
 
-
 	/**
-	 * JSONP自动回调函数
+	 * ajax主函数
 	 */
-	function jsonpCallback(data){
-		alert(data);
+	function ajax(url,options){
+		//创建xhr对象
+		var xhr = null;
+		if (window.XMLHttpRequest) {
+			xhr = new XMLHttpRequest();
+		} else if(window.ActiveXObject) {
+			xhr = new ActiveXObject('Microsoft.XMLHTTP');
+		} else {
+			alert('没有可用的XHR对象');
+		}
+
+		//事件监听
+		xhr.onreadystatechange = function(){
+			if (xhr.readyState === 4 && xhr.status === 200) {
+				alert(xhr.responseText);
+			};
+		}
+
+		//准备发送
+		if (typeof url === 'object') {
+			options = url;
+			url = undefined;
+		}
+		options = options || {};
+		var url = url || options.url;
+		var type = options.type || 'GET';
+		var data = options.data || null;
+		xhr.open(type,url,true);
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded; charset=UTF-8");
+
+		//发送
+		xhr.send(encodeURI(data));
 	}
 
 
@@ -264,16 +290,15 @@
 	 */
 	function Tooltip(obj){
 		this.tooltip = obj.next('tooltip');
-		this._oldDisplay = obj.next('tooltip').style.display;
 	}
 
 	Tooltip.prototype = {
 		constructor:Tooltip,
 		show: function(){
-			this.tooltip.style.display = _oldDisplay;
+			this.tooltip.style.visibility = 'visible';
 		},
 		hide: function(){
-			this.tooltip.style.display = 'none';
+			this.tooltip.style.visibility = 'hidden';
 		},
 		setContent: function(content,bgColor){
 			this.tooltip.style.backgroundColor = bgColor;
@@ -287,3 +312,5 @@
 		}
 	}
 
+
+	

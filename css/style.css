@@ -220,7 +220,7 @@
     
 
     /*tooltip*/
-    .tooltip{position:absolute;z-index:-99999;padding:12px 10px;font-size:16px;color:white;text-align:center;white-space:nowrap;background-color:#3498DB;;
+    .tooltip{visibility:hidden;position:absolute;z-index:99999;padding:12px 10px;font-size:16px;color:white;text-align:center;white-space:nowrap;background-color:#3498DB;;
         -webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border-radius:3px;}
     .tooltip:after{content:"";position:absolute;width:0;height:0;color:black;color:transparent;border:6px solid;}
     .tooltip.top:after{top:100%;right:50%;margin-right:-6px;border-top-color:#3498DB;}
