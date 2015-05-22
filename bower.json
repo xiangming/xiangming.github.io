@@ -1,0 +1,25 @@
+{
+  "name": "gruntfile",
+  "version": "0.1.0",
+  "homepage": "https://github.com/xiangming/gruntfile",
+  "authors": [
+    "arvin <webappsniper@gmail.com>"
+  ],
+  "description": "gruntfile for new project",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.4",
+    "font-awesome": "^4.2",
+    "jquery": "^1.11",
+    "animate-css": "~3.3.0",
+    "wow.js": "~1.1.2",
+    "jquery-easing": "*"
+  }
+}
