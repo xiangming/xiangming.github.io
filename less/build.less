@@ -67,9 +67,10 @@ a {
     transition: all .1s ease-in-out;
 
     &:hover, &:focus {
-        border-bottom: 1px dotted @theme-primary;
+        border-color: @theme-primary;
         color: @theme-primary!important;
         text-decoration: none;
+        outline: 0;
     }
 }
 
@@ -737,7 +738,7 @@ img::-moz-selection {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'Montserrat',sans-serif;
     line-height: 54px;
     cursor: pointer;
