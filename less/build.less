@@ -1,7 +1,3 @@
-@import url(http://fonts.useso.com/css?family=Open+Sans:400,600,300) ;
-
-@import url(http://fonts.useso.com/css?family=Montserrat) ;
-
 @import "variables.less";
 @import "mixins.less";
 
@@ -11,7 +7,7 @@ body {
     background-color: #fff;
     color: #4f535f;
     font-weight: 300;
-    font-family: 'Open Sans',sans-serif;
+    font-family: "Microsoft YaHei", 'Helvetica Neue', Helvetica, Arial, sans-serif;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -24,7 +20,6 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0 0 20px;
     letter-spacing: -.02em;
     font-weight: 400;
-    font-family: 'Open Sans',sans-serif;
 }
 
 h2 {
@@ -33,6 +28,7 @@ h2 {
 
 a {
     color: #666;
+    color: inherit;
 }
 
 h3 {
@@ -41,7 +37,6 @@ h3 {
     letter-spacing: 1px;
     font-weight: 700;
     font-size: 13px;
-    font-family: 'Montserrat',sans-serif;
 }
 
 p {
@@ -121,9 +116,7 @@ img::-moz-selection {
     z-index: 1000;
     margin-bottom: 0;
     background-color: #fff;
-    text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: 'Open Sans',sans-serif;
 
     a {
         border: none;
@@ -156,7 +149,6 @@ img::-moz-selection {
 
     .nav li a {
         color: rgba(255,255,255,.5);
-        font-family: 'Montserrat',sans-serif;
         -webkit-transition: background .3s ease-in-out;
         -moz-transition: background .3s ease-in-out;
         transition: background .3s ease-in-out;
@@ -438,7 +430,6 @@ img::-moz-selection {
             letter-spacing: 1px;
             font-weight: 400;
             font-size: 13px;
-            font-family: 'Montserrat',sans-serif;
         }
     }
 }
@@ -565,11 +556,10 @@ img::-moz-selection {
         letter-spacing: 0px;
         font-weight: 400;
         font-size: 30px;
-        font-family: 'Open Sans',sans-serif;
     }
 
     p {
-        padding: none!important;
+        padding: 0!important;
         color: rgba(255,255,255,.7);
         font-size: 16px;
         line-height: 24px;
@@ -586,16 +576,6 @@ img::-moz-selection {
     .contact-right {
         padding-left: 120px;
         border-left: 1px solid #def1e5;
-
-        span {
-            padding: 0 10px;
-            font-weight: 300;
-        }
-    }
-
-    .pstatus {
-        padding: 0px!important;
-        font-weight: 400!important;
     }
 
     .email {

@@ -38,16 +38,6 @@ module.exports = function(grunt){
 				}
 			}
 		},
-		csscomb: {
-			options: {
-				config: 'less/.csscomb.json'
-			},
-			build: {
-				files: {
-					'css/common.css': 'css/common.css'
-				}
-			}
-		},
 		cssmin: {
 			options: {
 				banner: '<%= banner %>',
@@ -69,11 +59,6 @@ module.exports = function(grunt){
 			}
 		},
 		copy: {
-			less: {
-				files: [
-					{expand: true, cwd: 'bower_components/gruntfile/less/', src:['**','.csscomb.json'], dest: 'less/'},
-				]
-			},
 			gitignore: {
 				files: [
 					{expand: true, cwd: 'bower_components/gruntfile/', src:['.gitignore'], dest: ''},
@@ -95,7 +80,7 @@ module.exports = function(grunt){
 			},
 			less: {
 				files: ['less/*.less', 'less/*/*.less'],
-				tasks: ['less', 'csscomb', 'cssmin:common'],
+				tasks: ['less', 'cssmin:common'],
                 options: {
                     livereload: true
                 }
@@ -108,8 +93,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-csscomb');
 	//制定任务
-	grunt.registerTask('init',['copy', 'uglify', 'less', 'csscomb', 'cssmin', 'watch']);
-	grunt.registerTask('default',['uglify', 'less', 'csscomb', 'cssmin', 'watch']);
+	grunt.registerTask('init',['copy', 'uglify', 'less', 'cssmin', 'watch']);
+	grunt.registerTask('default',['uglify', 'less', 'cssmin', 'watch']);
 }
