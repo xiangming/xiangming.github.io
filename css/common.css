@@ -376,19 +376,6 @@ img::-moz-selection {
   color: #fff;
   font-weight: 400;
 }
-.contact-section i {
-  padding-right: 10px;
-  padding-left: 10px;
-  color: #fff;
-  font-size: 21px;
-  -webkit-transition: .1s all linear;
-  -moz-transition: .1s all linear;
-  -o-transition: .1s all linear;
-  transition: .1s all linear;
-}
-.contact-section i:hover {
-  color: #5fcf80;
-}
 .contact-section h3 {
   color: #fff;
   text-align: left;
@@ -424,6 +411,17 @@ img::-moz-selection {
 }
 .contact-section .social {
   border: none!important;
+  padding-right: 5px;
+  padding-left: 5px;
+  color: #fff;
+  font-size: 21px;
+  -webkit-transition: .1s all linear;
+  -moz-transition: .1s all linear;
+  -o-transition: .1s all linear;
+  transition: .1s all linear;
+}
+.contact-section .social:hover {
+  color: #5fcf80;
 }
 .contact-section .social .fa-qq {
   font-size: 18px;
