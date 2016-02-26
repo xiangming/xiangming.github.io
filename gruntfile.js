@@ -3,7 +3,7 @@ module.exports = function(grunt){
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		banner: '/*!\n' +
-	            ' * Site Name: <%= pkg.name %> \n' +
+	            ' * Site Name: <%= pkg.name %>\n' +
 	            ' * Site URI: <%= pkg.URI %>\n' +
 	            ' * Description: <%= pkg.description %>\n' +
 	            ' * Author: <%= pkg.author %>\n' +

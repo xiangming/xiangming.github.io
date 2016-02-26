@@ -156,69 +156,6 @@ img::-moz-selection {
   background: none;
   color: #5fcf80 !important;
 }
-@media (max-width: 767px) {
-  p {
-    font-size: 16px;
-  }
-  .navbar-brand {
-    color: #333!important;
-  }
-  .navbar-custom .nav li a {
-    border-bottom: none!important;
-    color: #333!important;
-  }
-  .navbar-custom .nav li a:hover {
-    color: #5fcf80 !important;
-  }
-  .brand-heading {
-    color: #fff;
-    letter-spacing: -0.05em;
-    font-weight: 600;
-    font-size: 36px!important;
-  }
-  .intro-text {
-    text-align: center;
-    font-weight: 100;
-    font-size: 16px!important;
-    line-height: 30px;
-  }
-  .profile {
-    padding-bottom: 25px;
-  }
-  .about-section {
-    margin-top: -150px;
-    padding-top: 140px;
-    min-height: 700px!important;
-  }
-  .service-section {
-    min-height: 650px!important;
-  }
-  .service-section h2 {
-    padding-top: 100px!important;
-  }
-  .contact-left {
-    margin-top: 70px!important;
-    padding-right: 0px!important;
-  }
-  .contact-right {
-    margin-top: 70px!important;
-    padding-left: 20px!important;
-    border-left: none!important;
-  }
-}
-@media (max-width: 500px) {
-  .about-section {
-    margin-top: -150px;
-    padding-top: 140px;
-    min-height: 780px!important;
-  }
-  .service-section {
-    min-height: 690px!important;
-  }
-  .service-section .service-box {
-    padding-top: 100px;
-  }
-}
 @media (min-width: 767px) {
   .navbar {
     padding: 20px 0;
@@ -289,14 +226,9 @@ img::-moz-selection {
 }
 .content-section {
   padding-top: 100px;
-}
-@media (min-width: 767px) {
-  .content-section {
-    padding-top: 250px;
-  }
+  padding-bottom: 100px;
 }
 .about-section {
-  margin-top: -150px;
   min-height: 200px;
 }
 .about-section h2 {
@@ -320,7 +252,6 @@ img::-moz-selection {
   border-radius: 50%;
 }
 .portfolio-section {
-  margin-top: -150px;
   padding: 50px 0;
   width: 100%;
   min-height: 700px;
@@ -356,9 +287,7 @@ img::-moz-selection {
 }
 .grid figcaption h5 {
   margin: 0;
-  padding-top: 0px;
-  padding-bottom: 5px;
-  padding-left: 20px;
+  padding-top: 0;
   color: #fff;
   text-align: left;
   text-transform: uppercase;
@@ -409,19 +338,14 @@ img::-moz-selection {
 }
 .mask figcaption a {
   position: absolute;
-  right: 30px;
+  right: 20px;
   bottom: 10px;
 }
 .service-section {
-  margin-top: -150px;
-  padding: 50px 0;
   width: 100%;
   min-height: 400px;
   background-color: #fff;
   color: #666;
-}
-.service-section h2 {
-  margin-top: -50px;
 }
 .service-section h3 {
   margin-top: 20px;
@@ -437,7 +361,6 @@ img::-moz-selection {
   margin-top: -20px;
 }
 .contact-section {
-  margin-top: -150px;
   padding: 50px 0;
   width: 100%;
   min-height: 700px;
@@ -504,6 +427,52 @@ img::-moz-selection {
 }
 .contact-section .social .fa-qq {
   font-size: 18px;
+}
+@media (max-width: 767px) {
+  p {
+    font-size: 16px;
+  }
+  .navbar-brand {
+    color: #333!important;
+  }
+  .navbar-custom .nav li a {
+    border-bottom: none!important;
+    color: #333!important;
+  }
+  .navbar-custom .nav li a:hover {
+    color: #5fcf80 !important;
+  }
+  .brand-heading {
+    color: #fff;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+    font-size: 36px!important;
+  }
+  .intro-text {
+    text-align: center;
+    font-weight: 100;
+    font-size: 16px!important;
+    line-height: 30px;
+  }
+  .profile {
+    padding-bottom: 25px;
+  }
+  .content-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .service-section .service-box {
+    padding-top: 50px;
+  }
+  .contact-left {
+    margin-top: 50px!important;
+    padding-right: 0px!important;
+  }
+  .contact-right {
+    margin-top: 70px!important;
+    padding-left: 20px!important;
+    border-left: none!important;
+  }
 }
 #footer {
   bottom: 0;
