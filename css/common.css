@@ -336,11 +336,12 @@ img::-moz-selection {
   transform: translateY(100%);
   -ms-transform: translateY(100%);
 }
-.mask figcaption a {
+.mask figcaption .btn {
   position: absolute;
   right: 20px;
   bottom: 10px;
   letter-spacing: 1px;
+  padding: 4px 15px;
 }
 .service-section {
   width: 100%;
@@ -358,7 +359,7 @@ img::-moz-selection {
   padding-bottom: 20px;
   text-align: center;
 }
-.service-section .services-description {
+.service-section .service-description {
   margin-top: -20px;
 }
 .contact-section {
@@ -584,15 +585,6 @@ fieldset[disabled] .btn-primary.active {
 .btn-primary .badge {
   color: #5fcf80;
   background-color: #ffffff;
-}
-.btn {
-  border: none;
-  border-radius: 300px;
-  font-weight: 700;
-  text-transform: uppercase;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 .btn-hg {
   padding: 15px 30px;

@@ -1,9 +1,9 @@
 /*!
  * Site Name: Creative
- * Site URI: http://jasonxiang.com
+ * Site URI: http://arvinxiang.com
  * Description: A creative front-end web developer.
- * Author: Jason <arvinxiang@qq.com>
- * Author URI: http://jasonxiang.com
+ * Author: Arvin <arvinxiang#qq.com>
+ * Author URI: http://arvinxiang.com
  * Version: 1.0.0
  * © 2016 Creative. All rights reserved.
  */

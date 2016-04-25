@@ -1,9 +1,9 @@
 {
 	"name": "Creative",
-	"URI": "http://jasonxiang.com",
+	"URI": "http://arvinxiang.com",
 	"description": "A creative front-end web developer.",
-	"author": "Jason <arvinxiang@qq.com>",
-	"authorURI": "http://jasonxiang.com",
+	"author": "Arvin <arvinxiang#qq.com>",
+	"authorURI": "http://arvinxiang.com",
 	"version": "1.0.0",
 	"devDependencies": {
 		"grunt": "~0.4.2",
