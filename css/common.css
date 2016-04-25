@@ -355,12 +355,8 @@ img::-moz-selection {
   font-size: 20px;
 }
 .service-section p {
-  padding-top: 10px;
   padding-bottom: 20px;
   text-align: center;
-}
-.service-section .service-description {
-  margin-top: -20px;
 }
 .contact-section {
   padding: 50px 0;
