@@ -122,15 +122,15 @@ img::-moz-selection {
         border: none;
     }
 
-    .navbar-toggle {
-        padding: 4px 6px;
-        color: #444;
-        font-size: 16px;
+    // .navbar-toggle {
+    //     padding: 4px 6px;
+    //     color: #444;
+    //     font-size: 16px;
 
-        &:hover, &:focus, &:active{
-            outline: 0;
-        }
-    }
+    //     &:hover, &:focus, &:active{
+    //         outline: 0;
+    //     }
+    // }
 
     .navbar-brand {
         font-weight: 600;
@@ -148,6 +148,7 @@ img::-moz-selection {
     }
 
     .nav li a {
+        text-transform: capitalize;
         // color: rgba(255,255,255,.5);
         -webkit-transition: background .3s ease-in-out;
         -moz-transition: background .3s ease-in-out;
@@ -166,6 +167,10 @@ img::-moz-selection {
         border-bottom: none!important;
         background: none;
         color: @theme-primary!important;
+    }
+
+    .icon-bar{
+        background: #333;
     }
 }
 .affix .nav li a{
@@ -427,6 +432,7 @@ img::-moz-selection {
     min-height: 700px;
     background:#3385e3;
     background: linear-gradient(to right,#1278f6,#00b4aa);
+    background: -webkit-radial-gradient(closest-corner,rgba(16, 47, 70, 0) 60%,rgba(16, 47, 70, 0.2)),-webkit-linear-gradient(108deg,#00396F 10%,#E5E9BF 90%);
     background-color: #333;
     background-size: cover;
     color: #666;
@@ -508,6 +514,10 @@ img::-moz-selection {
         color: #333!important;
     }
 
+    // .navbar-custom {
+    //     background: transparent;
+    // }
+
     .navbar-custom .nav li a {
         border-bottom: none!important;
         color: #333!important;
@@ -544,6 +554,10 @@ img::-moz-selection {
         padding-top: 50px;
     }
 
+    .contact-section {
+        min-height: auto;
+    }
+
     .contact-left {
         margin-top: 50px!important;
         padding-right: 0px!important;
@@ -551,6 +565,7 @@ img::-moz-selection {
 
     .contact-right {
         margin-top: 70px!important;
+        margin-bottom: 70px!important;
         padding-left: 20px!important;
         border-left: none!important;
     }
