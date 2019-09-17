@@ -11,89 +11,168 @@ module.exports = function(grunt){
 	            ' * Version: <%= pkg.version %>\n' +
 	            ' * © <%= grunt.template.today("yyyy") %> <%= pkg.name%>. All rights reserved.\n' +
 	            ' */\n',
-		uglify: {
+		// babel: {
+		//     options: {
+		//     	// sourceMap: true,
+		//     	presets: ['env']
+		//     },
+		//     dist: {
+		//     	files: {
+		//         	// 'js/pull.min.js': 'js/pull.js'
+		//     	}
+		//     }
+		// },
+		eslint: {
 			options: {
-				banner: '<%= banner %>'
+				config: '.eslintrc',
+				reset: true
 			},
-			base: {
+	        app: ['js/*.js', '!js/*.min.js', '!js/*-bak*', '!js/loader.js']
+	    },
+		uglify: {
+			vendor: {
+				options: {
+					compress: {
+						drop_console: true
+					}
+				},
 				files: {
-					'js/base.min.js': [
-						'bower_components/jquery/dist/jquery.js',
-						'bower_components/bootstrap/dist/js/bootstrap.js',
-						'bower_components/wow.js/dist/wow.js',
-						'bower_components/jquery-easing/jquery.easing.js'
+					'js/vendor.min.js': [
+						'node_modules/jquery/dist/jquery.js',
+						'node_modules/bootstrap/dist/js/bootstrap.js',
+						'node_modules/wow.js/dist/wow.js',
+						// 'node_modules/jquery-easing/jquery.easing.js'
 					]
 				}
 			},
-			common: {
+			app: {
+				options: {
+					compress: {
+						drop_console: true // for debug
+					},
+					banner: '<%= banner %>'
+				},
 				files: {
-					'js/common.min.js': 'js/common.js'
+					'js/app.min.js': 'js/app.js'
 				}
 			}
 		},
 		less: {
-			build: {
+			options: {
+				banner: '<%= banner %>'
+			},
+			app: {
 				files: {
-					'css/common.css': 'less/build.less'
+					'css/app.min.css': 'less/build.less'
 				}
 			}
 		},
+		autoprefixer:{
+            options:{
+                browserslist:['chrome','ie','firefox'],
+                map:true
+            },
+            single_file: {
+                src: 'css/app.min.css',//需要加前缀的css文件
+                dest: 'css/app.min.css'//grunt处理后生成的css文件，如果文件夹中没有该文件，则自动创建
+            },
+        },
 		cssmin: {
-			options: {
-				banner: '<%= banner %>',
-				keepSpecialComments: '0'
-			},
-			base: {
+			vendor: {
+				options: {
+					// banner: '<%= banner %>',
+					keepSpecialComments: '0'
+				},
 				files: {
-					'css/base.min.css': [
-						'bower_components/font-awesome/css/font-awesome.css',
-						'bower_components/bootstrap/dist/css/bootstrap.css',
-						'bower_components/animate-css/animate.css'
+					'css/vendor.min.css': [
+						'node_modules/bootstrap/dist/css/bootstrap.css',
+						'node_modules/animate.css/animate.css'
 					]
 				}
 			},
-			common: {
+			app: {
+				options: {
+					banner: '<%= banner %>',
+					keepSpecialComments: '0'
+				},
 				files: {
-					'css/common.min.css': 'css/common.css'
+					'css/app.min.css': 'css/app.min.css'
 				}
 			}
 		},
-		copy: {
-			gitignore: {
-				files: [
-					{expand: true, cwd: 'bower_components/gruntfile/', src:['.gitignore'], dest: ''},
-				]
-			},
-			fonts: {
-				files: [
-					{expand: true, cwd: 'bower_components/font-awesome/fonts/', src:['**'], dest: 'fonts/'},
-				]
-			}
-		},
+  //       clean: {
+		// 	options: {
+		// 	    'force': true
+		// 	},
+		// 	release: ["release", "js/*.min.map"]
+		// },
+		// copy: {
+		// 	free: {
+		// 		files: [
+		// 			{
+		// 				expand: true,
+		// 				src:[
+		// 					'account/**/*',
+		// 					'action/**/*',
+		// 					'css/**/*.min.css',
+		// 					'css/fonts/**/*',
+		// 					'dist/**/*',
+		// 					'fonts/**/*',
+		// 					'images/**/*',
+		// 					'img/**/*',
+		// 					'includes/**/*',
+		// 					'inc/**/*',
+		// 					'js/**/*min.js',
+		// 					'js/**/*min.css',
+		// 					'languages/**/*',
+		// 					'pages/**/*',
+		// 					'templates/**/*',
+		// 					'modules/**/*',
+		// 					'settings/**/*',
+		// 					'widgets/**/*',
+		// 					'widget/**/*',
+		// 					'screenshot.*',
+		// 					'*.php',
+		// 					'*.css',
+		// 					'!**/cache/*',
+		// 					'!**/*-own*', // 不录入own自用文件
+		// 					'!**/*-bak*', // 不录入bak文件
+		// 				],
+		// 				dest: 'release/<%= pkg.name %>/'
+		// 			},
+		// 		]
+		// 	}
+		// },
 		watch: {
 			uglify: {
-				files: ['js/common.js'],
-				tasks: ['uglify:common'],
+				files: ['js/*.js', '!js/*.min.js'],
+				tasks: ['newer:uglify'], // newer使uglify只作用于有变化的文件
                 options: {
                     livereload: true
                 }
 			},
 			less: {
-				files: ['less/*.less', 'less/*/*.less'],
-				tasks: ['less', 'cssmin:common'],
+				files: ['less/**/*.less'],
+				tasks: ['less', 'autoprefixer', 'cssmin:app'],
                 options: {
                     livereload: true
                 }
 			}
 		}
 	});
+
 	//加载插件
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-copy');
+	// grunt.loadNpmTasks('grunt-contrib-clean');
+	// grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-newer');
+	grunt.loadNpmTasks('grunt-eslint');
+	grunt.loadNpmTasks('grunt-babel');
+
 	//制定任务
-	grunt.registerTask('init',['copy', 'uglify', 'less', 'cssmin', 'watch']);
-	grunt.registerTask('default',['uglify', 'less', 'cssmin', 'watch']);
+	grunt.registerTask('default', ['eslint', 'uglify', 'less', 'autoprefixer', 'cssmin', 'watch']);
 }

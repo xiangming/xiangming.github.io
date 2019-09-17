@@ -4,13 +4,26 @@
 	"description": "A creative front-end web developer.",
 	"author": "Arvin <arvinxiang#qq.com>",
 	"authorURI": "http://arvinxiang.com",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"devDependencies": {
+		"babel-core": "^6.26.3",
+		"babel-preset-env": "^1.7.0",
 		"grunt": "~0.4.2",
-		"grunt-contrib-cssmin": "~0.7.0",
-		"grunt-contrib-uglify": "~0.3.0",
-		"grunt-contrib-less": "~0.11.0",
+		"grunt-autoprefixer": "^3.0.4",
+		"grunt-babel": "^7.0.0",
+		"grunt-contrib-clean": "^0.6.0",
 		"grunt-contrib-copy": "~0.5.0",
-		"grunt-contrib-watch": "~0.5.3"
+		"grunt-contrib-cssmin": "~0.7.0",
+		"grunt-contrib-less": "~0.11.4",
+		"grunt-contrib-uglify": "~0.3.0",
+		"grunt-contrib-watch": "~0.5.3",
+		"grunt-eslint": "^21.0.0",
+		"grunt-newer": "^1.1.1"
+	},
+	"dependencies": {
+		"animate.css": "^3.7.2",
+		"bootstrap": "^3.4.1",
+		"jquery": "^1.12.4",
+		"wow.js": "^1.2.2"
 	}
 }
