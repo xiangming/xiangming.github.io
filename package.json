@@ -23,7 +23,7 @@
 	"dependencies": {
 		"animate.css": "^3.7.2",
 		"bootstrap": "^3.4.1",
-		"jquery": "^1.12.4",
+		"jquery": "^3.5.0",
 		"wow.js": "^1.2.2"
 	}
 }
